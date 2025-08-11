@@ -1,0 +1,20 @@
+2024-11-25 17:22:41,832:DEBUG:certbot._internal.main:certbot version: 1.23.0
+2024-11-25 17:22:41,832:DEBUG:certbot._internal.main:Location of certbot entry point: /usr/local/bin/certbot
+2024-11-25 17:22:41,832:DEBUG:certbot._internal.main:Arguments: []
+2024-11-25 17:22:41,833:DEBUG:certbot._internal.main:Discovered plugins: PluginsRegistry(PluginEntryPoint#manual,PluginEntryPoint#null,PluginEntryPoint#standalone,PluginEntryPoint#webroot)
+2024-11-25 17:22:41,859:DEBUG:certbot._internal.log:Root logging level set at 30
+2024-11-25 17:22:41,861:DEBUG:certbot._internal.display.obj:Notifying user: Processing /etc/letsencrypt/renewal/smarthan.site.conf
+2024-11-25 17:22:41,894:DEBUG:certbot._internal.plugins.selection:Requested authenticator <certbot._internal.cli.cli_utils._Default object at 0x7f72ea683880> and installer <certbot._internal.cli.cli_utils._Default object at 0x7f72ea683880>
+2024-11-25 17:22:41,924:DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): r11.o.lencr.org:80
+2024-11-25 17:22:42,108:DEBUG:urllib3.connectionpool:http://r11.o.lencr.org:80 "POST / HTTP/1.1" 200 504
+2024-11-25 17:22:42,110:DEBUG:certbot.ocsp:OCSP response for certificate /etc/letsencrypt/archive/smarthan.site/cert1.pem is signed by the certificate's issuer.
+2024-11-25 17:22:42,111:DEBUG:certbot.ocsp:OCSP certificate status for /etc/letsencrypt/archive/smarthan.site/cert1.pem is: OCSPCertStatus.GOOD
+2024-11-25 17:22:42,115:DEBUG:certbot._internal.display.obj:Notifying user: Certificate not yet due for renewal
+2024-11-25 17:22:42,116:DEBUG:certbot._internal.plugins.selection:Requested authenticator webroot and installer None
+2024-11-25 17:22:42,116:DEBUG:certbot._internal.display.obj:Notifying user: 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+2024-11-25 17:22:42,116:DEBUG:certbot._internal.display.obj:Notifying user: The following certificates are not due for renewal yet:
+2024-11-25 17:22:42,117:DEBUG:certbot._internal.display.obj:Notifying user:   /etc/letsencrypt/live/smarthan.site/fullchain.pem expires on 2025-01-08 (skipped)
+2024-11-25 17:22:42,117:DEBUG:certbot._internal.display.obj:Notifying user: No renewals were attempted.
+2024-11-25 17:22:42,117:DEBUG:certbot._internal.display.obj:Notifying user: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+2024-11-25 17:22:42,117:DEBUG:certbot._internal.renewal:no renewal failures

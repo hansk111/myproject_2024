@@ -1,0 +1,64 @@
+version: "3.8"
+
+services:
+
+  nginx:
+    build: ./nginx
+    volumes:
+      - ./static:/usr/src/app/static
+      - ./media:/usr/src/app/media
+      - ./data/certbot/conf:/etc/letsencrypt
+      - ./data/certbot/www:/var/www/certbot
+      - ./data/certbot/www/log:/var/log/letsencrypt
+
+    ports:
+      - 80:80
+      - 443:443
+    depends_on:
+      - frontend
+
+  certbot:
+    image: certbot/certbot
+    entrypoint: "/bin/sh -c 'trap exit TERM; while :; do certbot renew; sleep 12h & wait $${!}; done;'"
+    volumes:
+      - ./data/certbot/conf:/etc/letsencrypt
+      - ./data/certbot/www:/var/www/certbot
+      - ./data/certbot/www/log:/var/log/letsencrypt
+  
+  frontend:
+    build: ./frontend
+    ports:
+      - 3000:3000
+    working_dir: /usr/src/app
+    volumes:
+      - ./frontend/:/usr/src/app
+    command: npm run start
+    # environment:
+    #   NODE_ENV: development
+    depends_on:
+      - backend
+
+  backend:
+    build: ./backend
+    # command: python manage.py runserver 0.0.0.0:8000
+    command: gunicorn config.wsgi:application --bind 0.0.0.0:8000
+    ports:
+      - 8000:8000
+    volumes:
+      - ./backend/:/usr/src/app/
+    env_file:
+      - ./backend/.env.prod
+    depends_on:
+      - db    
+
+  db:
+    image: postgres:12.0-alpine
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    environment:
+      - POSTGRES_USER=smarthan
+      - POSTGRES_PASSWORD=passwordpassword
+      - POSTGRES_DB=smarthandb
+      
+volumes:
+  postgres_data:

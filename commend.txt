@@ -1,0 +1,89 @@
+python manage.py runsslserver --certificate localhost.pem --key localhost-key.pem
+
+# development use local, production mode use prod
+# dotenv_file = BASE_DIR / '.env.local'
+dotenv_file = BASE_DIR / '.env.prod'
+
+https를 사용하여 개발할때
+NEXT_PUBLIC_HOST=https://localhost:8000
+NEXT_PUBLIC_REDIRECT_URL=https://localhost:3001
+
+# https를 사용하지 않을때 혹은 window docker 를 사용할때
+# NEXT_PUBLIC_HOST=http://localhost:8000
+# NEXT_PUBLIC_REDIRECT_URL=http://localhost:3000
+
+# 실제 서버에 운영할때
+# NEXT_PUBLIC_HOST=https://smarthan.site
+# NEXT_PUBLIC_REDIRECT_URL=https://smarthan.site
+
+database setting
+https를 사용하여 개발할때 : sqlite
+docker :  postgre
+# 실제 서버에 운영할때 :  postgre
+
+
+  "scripts": {
+    "dev": "node server.js",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+
+
+  # https로 vscode에서 개발 모드로 실행할때
+    1. backend database : sqlite 사용
+    2. dotenv_file = BASE_DIR / '.env.local'
+    3. frontend env 파일에서 host 설정
+        NEXT_PUBLIC_HOST=https://localhost:8000
+        NEXT_PUBLIC_REDIRECT_URL=https://localhost:3000
+    4. /** @type {import('next').NextConfig} */
+      const nextConfig = {
+        modularizeImports: {
+          "@mui/icons-material": {
+            transform: "@mui/icons-material/{{member}}",
+          },
+        },
+
+        images: {
+          remotePatterns: [
+            {
+              protocol: 'https',
+              hostname: 'localhost',
+              port: '8000',
+              pathname: '/media/**',
+            },
+          ],
+        },
+        // output: "standalone",
+      };
+    5. 
+    REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        # 'users.authentication.CustomJWTAuthentication',
+        'rest_framework.authentication.BasicAuthentication',
+        # 'rest_framework.authentication.SessionAuthentication',
+    ],
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.IsAuthenticated'
+    ]
+}
+
+module.exports = nextConfig;
+
+  # window docker를 사용할때
+    1. database 는 postgre 를 사용
+    2. http를 사용
+    3. nginx  사용
+
+
+  # docker  컨테이너 접속해서
+     docker ps -a
+     docker exec -it e1da08b081e3 /bin/bash
+e1da08b081e3 
+     database 마이그레이션 실시
+     root@9252c944deeb:/usr/src/app# python manage.py migrate
+
+docker-compose build backend
+
+docker-compose down
+docker-compose up

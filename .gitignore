@@ -1,0 +1,15 @@
+venv/
+backup/
+sample/
+.next/
+media/
+node_modules/
+*.env.local
+db.sqlite3
+*.pem
+*.local
+*.pyc
+*.env.prod
+*.pem
+
+
