@@ -4,7 +4,7 @@ from django.db import models
 
 
 class BusStop(models.Model):
-    stationId = models.CharField(max_length=20, unique=True)
+    stationId = models.IntegerField(unique=True)
     stationName = models.CharField(max_length=50)
     x = models.FloatField()
     y = models.FloatField()
