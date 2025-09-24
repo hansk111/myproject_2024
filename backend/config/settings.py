@@ -56,6 +56,7 @@ INSTALLED_APPS = [
     'todos',
     'bus',
     'video',
+    'weather',
 
 ]
 

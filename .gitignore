@@ -11,5 +11,5 @@ db.sqlite3
 *.pyc
 *.env.prod
 *.pem
-
+data/certbot/www/log
 

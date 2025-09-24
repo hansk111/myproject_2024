@@ -1,17 +1,17 @@
-2025-08-27 09:50:49,530:DEBUG:certbot._internal.main:certbot version: 1.23.0
-2025-08-27 09:50:49,530:DEBUG:certbot._internal.main:Location of certbot entry point: /usr/local/bin/certbot
-2025-08-27 09:50:49,530:DEBUG:certbot._internal.main:Arguments: []
-2025-08-27 09:50:49,530:DEBUG:certbot._internal.main:Discovered plugins: PluginsRegistry(PluginEntryPoint#manual,PluginEntryPoint#null,PluginEntryPoint#standalone,PluginEntryPoint#webroot)
-2025-08-27 09:50:49,607:DEBUG:certbot._internal.log:Root logging level set at 30
-2025-08-27 09:50:49,609:DEBUG:certbot._internal.display.obj:Notifying user: Processing /etc/letsencrypt/renewal/smarthan.site.conf
-2025-08-27 09:50:49,642:DEBUG:certbot._internal.plugins.selection:Requested authenticator <certbot._internal.cli.cli_utils._Default object at 0x7f8cede42550> and installer <certbot._internal.cli.cli_utils._Default object at 0x7f8cede42550>
-2025-08-27 09:50:49,734:INFO:certbot.ocsp:Cannot extract OCSP URI from /etc/letsencrypt/archive/smarthan.site/cert6.pem
-2025-08-27 09:50:49,738:DEBUG:certbot._internal.display.obj:Notifying user: Certificate not yet due for renewal
-2025-08-27 09:50:49,739:DEBUG:certbot._internal.plugins.selection:Requested authenticator webroot and installer None
-2025-08-27 09:50:49,739:DEBUG:certbot._internal.display.obj:Notifying user: 
+2025-09-24 12:03:21,665:DEBUG:certbot._internal.main:certbot version: 1.23.0
+2025-09-24 12:03:21,665:DEBUG:certbot._internal.main:Location of certbot entry point: /usr/local/bin/certbot
+2025-09-24 12:03:21,665:DEBUG:certbot._internal.main:Arguments: []
+2025-09-24 12:03:21,666:DEBUG:certbot._internal.main:Discovered plugins: PluginsRegistry(PluginEntryPoint#manual,PluginEntryPoint#null,PluginEntryPoint#standalone,PluginEntryPoint#webroot)
+2025-09-24 12:03:21,707:DEBUG:certbot._internal.log:Root logging level set at 30
+2025-09-24 12:03:21,709:DEBUG:certbot._internal.display.obj:Notifying user: Processing /etc/letsencrypt/renewal/smarthan.site.conf
+2025-09-24 12:03:21,764:DEBUG:certbot._internal.plugins.selection:Requested authenticator <certbot._internal.cli.cli_utils._Default object at 0x7f840f47c670> and installer <certbot._internal.cli.cli_utils._Default object at 0x7f840f47c670>
+2025-09-24 12:03:22,015:INFO:certbot.ocsp:Cannot extract OCSP URI from /etc/letsencrypt/archive/smarthan.site/cert6.pem
+2025-09-24 12:03:22,019:DEBUG:certbot._internal.display.obj:Notifying user: Certificate not yet due for renewal
+2025-09-24 12:03:22,020:DEBUG:certbot._internal.plugins.selection:Requested authenticator webroot and installer None
+2025-09-24 12:03:22,020:DEBUG:certbot._internal.display.obj:Notifying user: 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-2025-08-27 09:50:49,739:DEBUG:certbot._internal.display.obj:Notifying user: The following certificates are not due for renewal yet:
-2025-08-27 09:50:49,739:DEBUG:certbot._internal.display.obj:Notifying user:   /etc/letsencrypt/live/smarthan.site/fullchain.pem expires on 2025-11-07 (skipped)
-2025-08-27 09:50:49,740:DEBUG:certbot._internal.display.obj:Notifying user: No renewals were attempted.
-2025-08-27 09:50:49,740:DEBUG:certbot._internal.display.obj:Notifying user: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-2025-08-27 09:50:49,740:DEBUG:certbot._internal.renewal:no renewal failures
+2025-09-24 12:03:22,020:DEBUG:certbot._internal.display.obj:Notifying user: The following certificates are not due for renewal yet:
+2025-09-24 12:03:22,020:DEBUG:certbot._internal.display.obj:Notifying user:   /etc/letsencrypt/live/smarthan.site/fullchain.pem expires on 2025-11-07 (skipped)
+2025-09-24 12:03:22,021:DEBUG:certbot._internal.display.obj:Notifying user: No renewals were attempted.
+2025-09-24 12:03:22,021:DEBUG:certbot._internal.display.obj:Notifying user: - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+2025-09-24 12:03:22,021:DEBUG:certbot._internal.renewal:no renewal failures

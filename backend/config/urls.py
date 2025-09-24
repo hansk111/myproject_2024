@@ -35,6 +35,7 @@ urlpatterns = [
     path('api/', include('todos.urls')),  # 'api/' 경로로 todos 앱의 URL 포함
     path('api/', include('bus.urls')),
     path('api/', include('video.urls')),
+    path('api/', include('weather.urls')),
 
     path('api/token/blacklist/', TokenBlacklistView.as_view(),
          name='token_blacklist'),
