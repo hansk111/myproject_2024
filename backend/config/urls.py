@@ -16,7 +16,7 @@ schema_view = get_schema_view(
         title="SmartHAN API",
         default_version='v1',
         description="SmartHAN API description",
-        terms_of_service="https://smarthan.site/policies/terms/",
+        terms_of_service="https://smarthan.store/policies/terms/",
         contact=openapi.Contact(email="smarthan@smarthan.site"),
         license=openapi.License(name="BSD License"),
     ),

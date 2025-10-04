@@ -9,14 +9,14 @@ const nextConfig = {
   images: {
     remotePatterns: [
       {
-        protocol: 'https',
-        hostname: 'smarthan.site',
-        port: '',
-        pathname: '/media/**',
+        protocol: "https",
+        hostname: "smarthan.store",
+        port: "",
+        pathname: "/media/**",
       },
     ],
   },
-  
+
   // output: "standalone",
 };
 

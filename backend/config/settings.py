@@ -28,7 +28,7 @@ DEBUG = getenv("DEBUG", "False")
 DEVELOPMENT_MODE = getenv("DEVELOPMENT_MODE", "False")
 
 
-ALLOWED_HOSTS = getenv("DJANGO_ALLOWED_HOSTS", "smarthan.site").split(",")
+ALLOWED_HOSTS = getenv("DJANGO_ALLOWED_HOSTS", "smarthan.store").split(",")
 
 # Application definition
 
@@ -224,7 +224,7 @@ SOCIAL_AUTH_KAKAO_PROFILE_EXTRA_PARAMS = {
 
 CORS_ALLOWED_ORIGINS = getenv(
     'CORS_ALLOWED_ORIGINS',
-    'https://localhost:3001,http://127.0.0.1:3000,https://127.0.0.1:3001,https://smarthan.site,http://127.0.0.1:8081,http://localhost:8081,file://'
+    'https://localhost:3001,http://127.0.0.1:3000,https://127.0.0.1:3001,https://smarthan.store,http://127.0.0.1:8081,http://localhost:8081,file://'
 ).split(',')
 CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOWED_ORIGIN_REGEXES = [

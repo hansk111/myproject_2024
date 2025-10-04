@@ -150,7 +150,7 @@ def delete_video(request):
 def load_images(request):
     try:
         response = Image.list('/media/postcontent/')
-        response['link'] = 'https://smarthan.site' + \
+        response['link'] = 'https://smarthan.store' + \
             response['link']  # 개발모드일때 수정 필요
     except Exception:
         response = {'error': str(sys.exc_info()[1])}

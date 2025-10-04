@@ -87,3 +87,15 @@ docker-compose build backend
 
 docker-compose down
 docker-compose up
+
+
+도메인 변경시 https  인증 처리 방법
+
+    server_name smarthan.store;
+    ssl_certificate /etc/letsencrypt/live/smarthan.store/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/smarthan.store/privkey.pem;
+
+    domains=(smarthan.store) 
+
+    docker-compose build nginx
+    
